@@ -38,9 +38,15 @@ for date in mylist:
       
 
 
-# Printing the outputs
-print(f'Total number of month = {numMonths}')
-print(f'Net profit and loss over {numMonths} = ','${:,}'.format(totalPandL))
-print(f'The average change per month = ', '${:,.2f}'.format(totalPandL/numMonths))
-print(f'The greatest gain occured on {maxGainMonth} for', '${:,.2f}'.format(maxGainAmt))
-print(f'The greatest loss occured on {maxLossMonth} for', '${:,.2f}'.format(maxLossAmt))
+mystring = 'Total number of month = '+ str(numMonths) + '\n'
+mystring = mystring + 'Net profit and loss over '+ str(numMonths) + ' = '+ '${:,}'.format(totalPandL) + '\n'
+mystring = mystring + 'The average change per month = '+ '${:,.2f}'.format(totalPandL/numMonths) + '\n'
+mystring = mystring + 'The greatest gain occured on ' + str(maxGainMonth) + ' for ' + '${:,.2f}'.format(maxGainAmt) + '\n'
+mystring = mystring + 'The greatest loss occured on ' + str(maxLossMonth) + ' for ' + '${:,.2f}'.format(maxLossAmt)
+
+print (mystring)
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+text_file = open('Bank_Analysis.txt', 'wt', encoding="utf-8")
+text_file.write(mystring)
+text_file.close()
