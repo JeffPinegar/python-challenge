@@ -46,13 +46,14 @@ for date in mylist:
       
 # build the output message one line at a time
 mystring = '\n============================================' + '\n'
-mystring = mystring + '>>>>><>>>>    P & L Analysis    <<<<<<<<<<<<' + '\n'
-mystring = mystring + '============================================' + '\n'
+mystring = mystring + '>>>>>>>>>>    P & L Analysis    <<<<<<<<<<<<' + '\n'
+mystring = mystring + '==================cd ..
+==========================' + '\n'
 mystring = mystring + 'Total number of month = '+ str(numMonths) + '\n'
 mystring = mystring + 'Net profit and loss over '+ str(numMonths) + ' = '+ '${:,}'.format(totalPandL) + '\n'
 mystring = mystring + 'The average change per month = '+ '${:,.2f}'.format(totalPandL/numMonths) + '\n'
-mystring = mystring + 'The greatest gain occured on ' + str(maxGainMonth) + ' for ' + '${:,.2f}'.format(maxGainAmt) + '\n'
-mystring = mystring + 'The greatest loss occured on ' + str(maxLossMonth) + ' for ' + '${:,.2f}'.format(maxLossAmt)
+mystring = mystring + 'The greatest gain occurred on ' + str(maxGainMonth) + ' for ' + '${:,.2f}'.format(maxGainAmt) + '\n'
+mystring = mystring + 'The greatest loss occurred on ' + str(maxLossMonth) + ' for ' + '${:,.2f}'.format(maxLossAmt)
 
 # Print the results to the screen
 print (mystring)

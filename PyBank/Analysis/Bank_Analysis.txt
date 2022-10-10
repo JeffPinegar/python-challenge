@@ -1,9 +1,9 @@
 
 ============================================
->>>>><>>>>    P & L Analysis    <<<<<<<<<<<<
+>>>>>>>>>>    P & L Analysis    <<<<<<<<<<<<
 ============================================
 Total number of month = 86
 Net profit and loss over 86 = $22,564,198
 The average change per month = $262,374.40
-The greatest gain occured on 13-Mar for $1,141,840.00
-The greatest loss occured on 10-Dec for $-1,194,133.00
+The greatest gain occurred on 13-Mar for $1,141,840.00
+The greatest loss occurred on 10-Dec for $-1,194,133.00

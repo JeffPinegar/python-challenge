@@ -58,7 +58,7 @@ resultsMessage.append(f'--------------------------------------------------------
 for name in thecandidates:
     formattedPer = '{:,.2f}%'.format(voteAverage[name]*100)
     formattedVoteTally = '{:,}'.format(voteTally[name])
-    resultsMessage.append(f'{name} recieved {formattedVoteTally} votes for {formattedPer} of the vote. \n')
+    resultsMessage.append(f'{name} received {formattedVoteTally} votes for {formattedPer} of the vote. \n')
 resultsMessage.append(f'--------------------------------------------------------------------------' + '\n')
 resultsMessage.append(f'The winner is: {theWinnerIs} \n')
 
