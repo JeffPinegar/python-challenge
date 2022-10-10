@@ -1,30 +1,36 @@
+# Jeff Pinegar
+# jeffpinegar1@gmail.com
+# October 10, 2022
+
+# PyBank Challenge
+
 import os
 import csv
 
-# Set path for file source file
+# Identify the source file, and set path to the file
 csvpath = os.path.join('.','Resources', 'election_data.csv')
 
 # open a csv file and read it in
-# creating a dictionary with the the header rows and keys
+# creating a dictionary using the header row as keys
 with open(csvpath,'r' ) as f:                        
     mydata = csv.DictReader(f, delimiter=',')
     mylist=list(mydata)
 
 
-# The total number of votes cast
+# The total number of votes cast is equal to the length of the list
 numVotes = len(mylist)
 
-# A complete list of candidates who received votes
-# uses the property of set - only unique values so duplicates are eleminated
-thecandidates=set()  #this is needed of python will create a dictionary
+# Create a complete list of candidates who received votes. 
+# Sets can only contain unique elements. So adding every vote to a set will eliminate the duplicate names.
+thecandidates=set()  # The empty set is create first.  This technique is used so that python does not create a dictionary
 for vote in mylist:
     thecandidates.add(vote['Candidate'])
 
 
-# The total number of votes each candidate won
-# create a dictionary from the keys of 'thecanidates' setting the initial value of each to 0
+# Calculate the total number of votes each candidate received.
+# Create a dictionary using the 'thecanidates' as keys and setting the initial value of each to 0
 voteTally= dict.fromkeys(thecandidates,0)
-for vote in mylist:
+for vote in mylist:                         #Accumulate the votes for each canidate
     name = vote['Candidate']
     voteTally[name] += 1
 
@@ -62,7 +68,7 @@ print(*resultsMessage)
 
 
 #Write the results to a file
-# Open the file using "write" mode. Specify the variable to hold the contents
+# Open the file using "write" mode. Specify the filename for the results
 textpath = os.path.join('.','Analysis', 'Election_Results.txt')
 text_file = open(textpath, 'wt', encoding="utf-8")
 lineNum=0

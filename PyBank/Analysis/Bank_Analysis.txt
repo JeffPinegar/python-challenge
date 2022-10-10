@@ -1,3 +1,7 @@
+
+============================================
+>>>>><>>>>    P & L Analysis    <<<<<<<<<<<<
+============================================
 Total number of month = 86
 Net profit and loss over 86 = $22,564,198
 The average change per month = $262,374.40
